@@ -1,0 +1,154 @@
+/*Barra de navegacion*/
+.navbar {
+    padding: 2rem;
+    background-color: #000000;
+}
+
+/*Barra de navegacion- colocar a la derecha*/
+.navbar-collapse{
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*es para el color de la barra al reducir*/
+.navbar-toggler{
+    background-color: #eeeeee;
+}
+
+/*color de las letras de navegacion*/
+.nav-link {
+    color: #ffffff;
+}
+
+/*esconder el logo cuando se vuelve pequeño la web*/
+@media screen and (max-width: 767px){
+    .navbar-brand{
+    display: none;
+    }
+}
+
+/*es para el subrayado de las letras*/
+.nav-link:hover {
+    color: #ff985c;
+    text-decoration: underline;
+}
+
+/*Estilos generales*/
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center ;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #fdfdfd; /*color de titulo h1*/
+}
+
+/*Seccion 1*/
+.hero{
+    /*background-color: #000000; /*color de fondo de seccion1*/
+    min-height: 500px; /*altura minima*/
+    text-align:center; /*hvyiu*/
+}
+
+.hero-principal{
+    padding: 3rem;
+}
+
+.hero-principal video {
+    width: 100%;
+  	height: auto;
+    z-index: -100;
+	position: absolute;
+  	background-size: cover;
+  	background-attachment: fixed;
+}
+
+/*para la imagen de la seccion 1*/
+.hero-imagen { 
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /*imagen redondeado*/
+    margin: 20px;
+    /*si deseas colocar una clase redondeada en la imagen con rounded-circle*/
+}
+
+/*para el susbtitulo del h2*/
+.hero-principal h2 { 
+    font-size: 1.5rem;
+    color: #fdfdfd;
+}
+
+
+/*Experiencia*/
+.experiencia {
+    padding: 40px;
+}
+
+/*Seccion clara*/
+.seccion-clara{
+    color: black;
+    background-color: white;
+}
+
+
+
+
+.card {
+    overflow: hidden;
+    border-radius: 15px;
+    border: none;
+    background-color: #fafafa;
+    box-shadow: 10px 10px 30px rgb(10 10 10 / 10%);
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.prueba {
+    width: 280px;
+    margin-bottom: 20px;
+}
+
+.productos-fila {
+    justify-content: center; /* Centra todos los elementos que hay dentro de una div */
+}
+
+.card-link1, .card-link2 {
+    text-decoration: none; /* Desabilitar el subrayado de los textos */
+    /*background-color: red;*/
+    width: 100% !important;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.card-foot {
+    padding-bottom: 15px;
+}
+
+.card img {
+    width: 257px;
+    height: 252px;
+}
+
+.card-link2 img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/*Colocar imagen en la parte de abajo, para que se vea texto e imagen sobre la misma linea*/
+img {
+    vertical-align: text-bottom;
+}
+/**/
+
+/*color de fondo de los productos*/
+#productos {
+    background-color: #eeeeee;
+}

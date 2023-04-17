@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Metadatos-->
+    <meta charset="UTF-8"> <!--codificacion de caracteres-->
+    <meta name="author" content="Sheily Santamaria"> 
+    <meta name="description" content="Pagina Web Aceros">
+    <meta name="keywords" content="HTML, CSS, JavaScript, React">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--Ajustar a pantallas de navegador-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con navegador-->
+    
+    <!--Titulo-->
+    <title>Proyecto Acero</title>
+    <!--Icono-->
+    <link rel="icon" href="assets/logo2.png">
+
+     <!--Agregar boostrap-->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> 
+    
+    <!--Conexión al archivo css-->
+    <link rel="stylesheet" href="css/style.css"> 
+   
+</head>
+<body>
+      <!--Barra de navegacion-->
+        <nav class="navbar navbar-expand-md navbar-ligth"> <!--expandir cuando sea mediano md-->
+            <div class="container-fluid">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbar-toggler">
+                <a class="navbar-brand" href="#">
+                  <img src="assets/logo.png" width="100" height="50" alt="Logo de la pag">
+                </a>
+
+                <ul class="navbar-nav d-flex justify-content-center align-items-center">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#productos">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servicios</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Cotizaciones</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                  </li>
+                  </ul>
+                </div>
+              </div>
+          </nav>
+
+      <!--Seccion 1--> 
+       <section id="inicio" class="hero align-items-stretch"> <!--align es un elemento para llenar contenedor-->
+          <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+            <video id="portada" muted autoplay playsinline preload="auto" loop="true">
+              <source src="assets/video/video-presentacion.mp4" type='video/webm; codecs="vp8, vorbis"'>Tu navegador no soporta este formato<code>video</code>.
+            </video>
+            <!--<img class="hero-imagen" src="assets/image.jpg" alt="logo">-->
+            <h1>ACELIMA S.A.C</h1>
+            <h2>BRINDANDO CALIDAD Y BUEN SERVICIO EN PERÚ</h2>
+          </div>
+        </section>
+
+      <!--Seccion: sobre mi-->
+      <!--
+      <section class="sobre-mi seccion-oscura">
+        <div class="contenedor">
+          <h2 class="seccion-titulo"> Conoce a Jane Doe</h2>
+          <p class="seccion-texto"> esto es una prueba</p>
+        </div>
+      </section>
+      -->
+        <!--Productos1-->
+        <section id="productos" class="experiencia seccion-clara">
+          <div class="container text-center">
+            <div class="row productos-fila">              
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/AISI 1020.jpeg" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO AISI 1020</h5>
+                  <!--<p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p>-->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Producto2-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/AISI 1045.jpeg" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO AISI 1045</h5>
+                  <!-- <p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Producto3-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/Barra perforadora.jpeg" class="card-img-top" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">BARRAS PERFORADAS</h5>
+                   <!-- <p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Producto4-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/CEMENTACION.jpeg" class="card-img-top" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO CEMENTACIÓN</h5>
+                  <!-- <p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Producto5-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/AISI 4340.jpg" class="card-img-top" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO VCL (4140)</h5>
+                  <!-- <p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <!--Productos6-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/ACERO VCN.jpg" class="card-img-top" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO VCN (4340)</h5>
+                    <!-- <p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Productos7-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/Plancha antidesgaste T1.jpeg" class="card-img-top" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO ANTI DESGASTE</h5>
+                  <!--<p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+              <!--Productos8-->
+              <div class="prueba">
+                <div class="card">
+                  <div style="height: 250px; overflow: hidden;">
+                    <img src="assets/Acero para moldes.jpeg" class="card-img-top" alt="icono">
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title">ACERO PARA MOLDES</h5>
+                  <!--<p class="card-text">Utilizado para la fabricación de ejes, bujes, piñones, engranajes, etc., también se aplica en la industria de la construccion para la fabricación de anclajes</p> -->
+                  </div>
+                  <!--<ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                  </ul> -->
+                  <div class="card-foot">
+                    <a href="https://pe.suminoxaceros.com/PDFs/AISI%201020.pdf" class="card-link1" target="_blank">Ficha Tecnica</a>
+                    <a href="https://wa.me/message/HJZDOVWKSMS5G1" class="card-link2">Solicitar Cotización <img src="assets/whatsapp.png"> </a>
+                  </div>
+                </div>
+              </div>
+
+            
+            </div>
+
+          </div>
+        </section>
+
+    <footer></footer>
+
+    <script ></script>
+</body>
+</html>
