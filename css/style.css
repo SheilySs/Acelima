@@ -29,7 +29,7 @@
 
 /*es para el subrayado de las letras*/
 .nav-link:hover {
-    color: #ff985c;
+    color: rgb(255, 138, 42);
     text-decoration: underline;
 }
 
@@ -49,7 +49,7 @@ h1 {
 /*Seccion 1*/
 .hero{
     /*background-color: #000000; /*color de fondo de seccion1*/
-    min-height: 500px; /*altura minima*/
+    min-height: 600px; /*altura minima*/
     text-align:center; /*hvyiu*/
 }
 
@@ -88,25 +88,20 @@ h1 {
 }
 
 /*Seccion clara*/
-.seccion-clara{
+.seccion-clara {
     color: black;
     background-color: white;
 }
 
-
-
-
-.card {
-    overflow: hidden;
-    border-radius: 15px;
-    border: none;
-    background-color: #fafafa;
-    box-shadow: 10px 10px 30px rgb(10 10 10 / 10%);
+.seccion-oscura {
+    color: white;
+    background-color: black;
 }
 
-.card-title {
-    font-weight: 600;
-    font-size: 13px;
+
+
+.productos-fila {
+    justify-content: center; /* Centra todos los elementos que hay dentro de una div */
 }
 
 .prueba {
@@ -114,8 +109,48 @@ h1 {
     margin-bottom: 20px;
 }
 
-.productos-fila {
-    justify-content: center; /* Centra todos los elementos que hay dentro de una div */
+.card {
+    overflow: hidden;
+    /*border-radius: 15px;*/
+    border-radius: 5px;
+    border: solid 5px #FFFFFF;
+    background-color: #FFFFFF;
+    box-shadow: 10px 10px 30px rgb(10 10 10 / 10%);
+    margin-bottom: 20px;
+}
+
+.card-image {
+    height: 235px;
+    overflow: hidden;
+}
+
+.card-title {
+    font-weight: 600;
+    font-size: 13px;
+    color: #646464;
+    transition: .3s;
+    padding: 2px 0;
+    border-bottom: 2px solid #FFFFFF;
+}
+
+.card:hover .card-title {
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+
+/* [Card foot] */
+.card-foot {
+    padding-bottom: 15px;
+}
+
+.card-foot i {
+    border-radius: 50%;
+    background-color: rgb(0, 207, 0);
+    color: #FFFFFF;
+    padding: 5px;
+    margin-left: 5px;
+    transition: .3s;
 }
 
 .card-link1, .card-link2 {
@@ -125,21 +160,33 @@ h1 {
     display: block;
     margin-bottom: 10px;
     font-weight: 500;
+    color: #000000;
+    transition: .3s;
 }
 
-.card-foot {
-    padding-bottom: 15px;
+.card-link1:hover, .card-link2:hover {
+    color: rgb(255, 115, 0);
+}
+
+.card-link2:hover i {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 207, 0);
+    margin-left: 0;
+    font-weight: 800;
 }
 
 .card img {
-    width: 257px;
-    height: 252px;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
 }
 
 .card-link2 img {
     width: 20px;
     height: 20px;
 }
+/* [Card foot] */
+
 
 
 /*Colocar imagen en la parte de abajo, para que se vea texto e imagen sobre la misma linea*/
@@ -150,5 +197,145 @@ img {
 
 /*color de fondo de los productos*/
 #productos {
-    background-color: #eeeeee;
+    background-color: #000000;
+    background-size: 100%;
+    background-position: 45%;
+}
+
+
+/*Seccion Servicios*/
+.panel {
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    display: inline-flex;  /* Alinear elementos de un div de forma horizontal */
+}
+
+/*esconder el logo cuando se vuelve pequeño la web*/
+@media screen and (max-width: 683px){
+    .panel {
+        display: inline;
+    }
+
+    .panel .panel-info, .panel .panel-img {
+        width: 100%;
+    }
+}
+
+.panel .panel-info {
+    position: relative;
+    background-color: black;
+    color: white;
+    height: 400px;
+    margin: 0;
+    padding: 0;
+}
+
+.panel .panel-info h2 {
+    font-weight: 800;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.panel .panel-info p {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.panel .panel-info button {
+    width: 100%;
+    color: #000000;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(255, 138, 42), rgb(255, 138, 42), rgb(255, 255, 255), rgb(255, 255, 255));
+    background-size: 300%;
+    background-position: right;
+    transition: .3s ease-in;
+    border: none;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.panel .panel-info button:hover {
+    background-position: left;
+}
+
+.panel .panel-info .text-content {
+    position: absolute;
+    bottom: 0;
+    padding: 30px 40px;
+}
+
+.panel .panel-img {
+    position: relative;
+    height: 400px;
+    padding: 0;
+}
+
+.panel .panel-img img {
+    width: 100%;
+    display: inline;
+}
+
+
+
+
+/* [Contacto] */
+.contacto {
+    padding: 100px 0;
+}
+
+.contact-column img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.social i {
+    border-radius: 50%;
+    background-color: rgb(44, 44, 44);
+    color: #FFFFFF;
+    margin-right: 5px;
+    transition: .3s;
+    padding: 10px;
+    width: 36px;
+    text-align: center;
+}
+
+.contact-column h4 {
+    width: 100%;
+    font-weight: 700;
+}
+
+.contact-column h5 {
+    width: 100%;
+    font-weight: 500;
+    font-size: 15px;
+    color: #ABABAB;
+    padding-top: 40px;
+}
+
+.contact-column p {
+    padding: 0;
+    margin: 0;
+}
+
+.contact-column a {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: #ABABAB;
+    transition: .3s;
+}
+
+.contact-column a:hover {
+    color: #FFFFFF;
+}
+
+.contacto button {
+    color: #FFFFFF;
+    background-color: #000000;
+    border: none;
+    text-decoration: none !important;
+    
 }
