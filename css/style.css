@@ -98,6 +98,143 @@ h1 {
     background-color: black;
 }
 
+.titulo-seccion {
+    position: relative;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.ts-paralelogramo {
+    background-color: #093b78;
+    transform: skew(-50deg);
+    margin: 0 20%;
+    padding: 10px 0;
+    position: relative;
+    height: 100px;
+}
+
+.ts-titulo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0 35%;
+    color: #ffffff;
+    height: 100px;
+
+}
+
+.ts-titulo h1 {
+    font-weight: 700;
+    font-size: 34px;
+    border-bottom: solid 1px #ffffff;
+    margin-bottom: 15px;
+}
+
+.ts-titulo h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.ts-descripcion {
+    position: relative;
+    margin: 20px 7.8%;
+    color: #ffffff;
+    font-weight: 600;
+    transition: .5s;
+    padding: 10px 10px 0 10px;
+    border: 1px solid #848484;
+    overflow: hidden;
+}
+
+.ts-descripcion::before, .ts-descripcion::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border: 1px solid transparent;
+}
+
+.ts-descripcion:hover::before {
+    animation: animate .5s linear forwards;
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: #ffffff;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    50% {
+        width: 100%;
+        height: 0;
+        border-top-color: #ffffff;
+        border-right-color: #ffffff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: #ffffff;
+        border-right-color: #ffffff;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+
+.ts-descripcion:hover::after {
+    animation: animate2 .5s linear forwards;
+}
+
+@keyframes animate2 {
+    0% {
+        width: 0;
+        height: 0;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: #ffffff;
+    }
+
+    50% {
+        width: 0;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+
+    100% {
+        width: 100%;
+        height: 100%;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: #ffffff;
+        border-left-color: #ffffff;
+    }
+}
+
+
+.ts-descripcion p {
+    font-size: 16px;
+}
+
 
 
 .productos-fila {
@@ -107,6 +244,8 @@ h1 {
 .prueba {
     width: 280px;
     margin-bottom: 20px;
+    overflow: hidden;
+    padding-top: 20px;
 }
 
 .card {
@@ -117,6 +256,7 @@ h1 {
     background-color: #FFFFFF;
     box-shadow: 10px 10px 30px rgb(10 10 10 / 10%);
     margin-bottom: 20px;
+    transition: transform .2s; /* Animacion de zoom */
 }
 
 .card-image {
@@ -128,9 +268,13 @@ h1 {
     font-weight: 600;
     font-size: 13px;
     color: #646464;
-    transition: .3s;
+    transition: .5s;
     padding: 2px 0;
-    border-bottom: 2px solid #FFFFFF;
+    border-bottom: 2px solid #ffffff;
+}
+
+.card:hover {
+    transform: scale(1.04);
 }
 
 .card:hover .card-title {
@@ -155,7 +299,6 @@ h1 {
 
 .card-link1, .card-link2 {
     text-decoration: none; /* Desabilitar el subrayado de los textos */
-    /*background-color: red;*/
     width: 100% !important;
     display: block;
     margin-bottom: 10px;
