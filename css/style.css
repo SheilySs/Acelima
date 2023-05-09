@@ -366,6 +366,7 @@ img {
     }
 }
 
+
 .panel .panel-info {
     position: relative;
     background-color: black;
@@ -386,8 +387,7 @@ img {
     margin-bottom: 20px;
 }
 
-.panel .panel-info button {
-    width: 100%;
+.panel .panel-info a {
     color: #000000;
     font-weight: 600;
     background: linear-gradient(to right, rgb(255, 138, 42), rgb(255, 138, 42), rgb(255, 255, 255), rgb(255, 255, 255));
@@ -398,11 +398,16 @@ img {
     padding: 5px;
     margin-bottom: 10px;
     border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
 }
 
-.panel .panel-info button:hover {
+.panel .panel-info a:hover {
     background-position: left;
 }
+
 
 .panel .panel-info .text-content {
     position: absolute;
