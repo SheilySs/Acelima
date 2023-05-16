@@ -1,3 +1,4 @@
+
 /*Barra de navegacion*/
 .navbar {
     padding: 2rem;
@@ -18,12 +19,14 @@
 /*color de las letras de navegacion*/
 .nav-link {
     color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 /*esconder el logo cuando se vuelve pequeño la web*/
 @media screen and (max-width: 767px){
     .navbar-brand{
-    display: none;
+        display: none;
     }
 }
 
@@ -38,7 +41,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
 }
 
 h1 {
@@ -48,9 +51,12 @@ h1 {
 
 /*Seccion 1*/
 .hero{
-    /*background-color: #000000; /*color de fondo de seccion1*/
-    min-height: 600px; /*altura minima*/
-    text-align:center; /*hvyiu*/
+    position: relative;
+	background-attachment: fixed;
+    height: 600px;
+    text-align:center;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .hero-principal{
@@ -59,11 +65,25 @@ h1 {
 
 .hero-principal video {
     width: 100%;
-  	height: auto;
+  	height: 100%;
     z-index: -100;
 	position: absolute;
   	background-size: cover;
   	background-attachment: fixed;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	#portada-video {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	#portada-video {
+		width: auto;
+		height: 100%;
+	}
 }
 
 /*para la imagen de la seccion 1*/
@@ -75,10 +95,15 @@ h1 {
     /*si deseas colocar una clase redondeada en la imagen con rounded-circle*/
 }
 
+.hero-principal h1 {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgba(0, 0, 0, 0.137);
+}
+
 /*para el susbtitulo del h2*/
 .hero-principal h2 { 
     font-size: 1.5rem;
-    color: #fdfdfd;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgba(0, 0, 0, 0.137);
 }
 
 
@@ -151,6 +176,39 @@ h1 {
     border: 1px solid #848484;
     overflow: hidden;
 }
+
+
+@media screen and (max-width: 767px){
+    .ts-paralelogramo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ts-titulo {
+        padding: 0 20%;
+    }
+}
+
+
+@media screen and (max-width: 670px){
+    .ts-paralelogramo {
+        background-color: #020529;
+        transform: skew(-10deg);
+        margin: 0 20px;
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    .ts-titulo h1 {
+        /* color: rgb(255, 138, 42); */
+        /* text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 136, 0), 0 0 0.2em rgb(0, 0, 0); */
+        color: rgb(42, 131, 255);
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 81, 255), 0 0 0.2em rgb(0, 0, 0);
+        border-bottom: solid 1px #ffffff;
+        padding-top: 4px;
+    }
+}
+
 
 .ts-descripcion::before, .ts-descripcion::after {
     position: absolute;
@@ -424,6 +482,24 @@ img {
 .panel .panel-img img {
     width: 100%;
     display: inline;
+}
+
+@media screen and (max-width: 960px){
+    .panel .panel-info .text-content {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .panel .panel-info .text-content {
+        padding: 30px 10px;
+    }
+}
+
+@media screen and (max-width: 684px){
+    .panel .panel-info .text-content {
+        padding: 30px 0;
+    }
 }
 
 
