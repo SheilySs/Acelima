@@ -598,61 +598,6 @@ img {
 
 
 
-@media screen and (max-width: 900px){
-    .change-order {
-        display: block;
-    }
-
-    .panel {
-        display: inline-block;
-    }
-
-    .panel .panel-info-left .text-content,
-    .panel .panel-info-right .text-content {
-        padding: 0 0 10px 0;
-    }
-
-    .hide {
-        display: none;
-    }
-}
-
-
-@media screen and (max-width: 520px){
-    .panel .panel-img-first,
-    .panel .panel-img-second,
-    .panel .panel-img-third,
-    .panel .panel-img-fourth {
-        height: 300px;
-    }
-}
-
-@media screen and (max-width: 400px){
-    .panel .panel-img-first,
-    .panel .panel-img-second,
-    .panel .panel-img-third,
-    .panel .panel-img-fourth {
-        height: 240px;
-    }
-}
-
-@media screen and (max-width: 960px){
-    .panel .panel-info .text-content {
-        padding: 30px 20px;
-    }
-}
-
-@media screen and (max-width: 760px){
-    .panel .panel-info .text-content {
-        padding: 30px 10px;
-    }
-}
-
-@media screen and (max-width: 684px){
-    .panel .panel-info .text-content {
-        padding: 30px 0;
-    }
-}
 
 /* [Contacto] */
 .contacto {
