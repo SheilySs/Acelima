@@ -26,8 +26,10 @@
 /*esconder el logo cuando se vuelve pequeño la web*/
 @media screen and (max-width: 767px){
     .navbar-brand {
+    .navbar-brand{
         display: none;
     }
+}
 }
 
 /*es para el subrayado de las letras*/
@@ -510,6 +512,7 @@ img {
     width: 60%;
 }
 
+/*head*/
 .panel .panel-img-third {
     position: relative;
     height: 400px;
@@ -595,9 +598,23 @@ img {
     }
 }
 
+@media screen and (max-width: 960px){
+    .panel .panel-info .text-content {
+        padding: 30px 20px;
+    }
+}
 
+@media screen and (max-width: 760px){
+    .panel .panel-info .text-content {
+        padding: 30px 10px;
+    }
+}
 
-
+@media screen and (max-width: 684px){
+    .panel .panel-info .text-content {
+        padding: 30px 0;
+    }
+}
 
 /* [Contacto] */
 .contacto {
