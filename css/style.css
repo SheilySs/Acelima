@@ -25,9 +25,10 @@
 
 /*esconder el logo cuando se vuelve pequeño la web*/
 @media screen and (max-width: 767px){
-    .navbar-brand {
-        display: none;
+    .navbar-brand{
+    display: none;
     }
+}
 }
 
 /*es para el subrayado de las letras*/
@@ -487,41 +488,7 @@ img {
     padding: 30px 40px;
 }
 
-
-.panel .panel-img-first {
-    position: relative;
-    height: 400px;
-    padding: 0;
-    overflow: hidden;
-    background-image: url(../assets/asesoramiento4.jpg);
-    background-size: cover;
-    background-position: center;
-    width: 60%;
-}
-
-.panel .panel-img-second {
-    position: relative;
-    height: 400px;
-    padding: 0;
-    overflow: hidden;
-    background-image: url(../assets/mecanizado.png);
-    background-size: cover;
-    background-position: center;
-    width: 60%;
-}
-
-.panel .panel-img-third {
-    position: relative;
-    height: 400px;
-    padding: 0;
-    overflow: hidden;
-    background-image: url(../assets/termico.png);
-    background-size: cover;
-    background-position: center;
-    width: 60%;
-}
-
-.panel .panel-img-fourth {
+.panel .panel-img {
     position: relative;
     height: 400px;
     padding: 0;
@@ -532,29 +499,11 @@ img {
     width: 60%;
 }
 
-
-@media screen and (max-width: 1120px){
-    .panel .panel-info-left,
-    .panel .panel-info-right {
-        width: 100%;
-        height: 400px;
-    }
-
-    .panel .panel-info-left .text-content {
-        padding: 30px 40px 30px 0;
-    }
-
-    .panel .panel-info-right .text-content {
-        padding: 30px 0 30px 40px;
-    }
-
-    .panel .panel-img-first,
-    .panel .panel-img-second,
-    .panel .panel-img-third,
-    .panel .panel-img-fourth {
-        width: 100%;
-    }
+.panel .panel-img img {
+    width: 100%;
+    display: inline;
 }
+
 
 
 @media screen and (max-width: 900px){
@@ -595,9 +544,23 @@ img {
     }
 }
 
+@media screen and (max-width: 960px){
+    .panel .panel-info .text-content {
+        padding: 30px 20px;
+    }
+}
 
+@media screen and (max-width: 760px){
+    .panel .panel-info .text-content {
+        padding: 30px 10px;
+    }
+}
 
-
+@media screen and (max-width: 684px){
+    .panel .panel-info .text-content {
+        padding: 30px 0;
+    }
+}
 
 /* [Contacto] */
 .contacto {
