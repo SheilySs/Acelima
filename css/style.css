@@ -1,3 +1,4 @@
+
 /*Barra de navegacion*/
 .navbar {
     padding: 2rem;
@@ -5,25 +6,27 @@
 }
 
 /*Barra de navegacion- colocar a la derecha*/
-.navbar-collapse{
+.navbar-collapse {
     align-items: center;
     justify-content: space-between;
 }
 
 /*es para el color de la barra al reducir*/
-.navbar-toggler{
+.navbar-toggler {
     background-color: #eeeeee;
 }
 
 /*color de las letras de navegacion*/
 .nav-link {
     color: #ffffff;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 /*esconder el logo cuando se vuelve pequeño la web*/
 @media screen and (max-width: 767px){
-    .navbar-brand{
-    display: none;
+    .navbar-brand {
+        display: none;
     }
 }
 
@@ -38,7 +41,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
 }
 
 h1 {
@@ -48,9 +51,12 @@ h1 {
 
 /*Seccion 1*/
 .hero{
-    /*background-color: #000000; /*color de fondo de seccion1*/
-    min-height: 600px; /*altura minima*/
-    text-align:center; /*hvyiu*/
+    position: relative;
+	background-attachment: fixed;
+    height: 600px;
+    text-align:center;
+    overflow: hidden;
+    z-index: 0;
 }
 
 .hero-principal{
@@ -59,11 +65,25 @@ h1 {
 
 .hero-principal video {
     width: 100%;
-  	height: auto;
+  	height: 100%;
     z-index: -100;
 	position: absolute;
   	background-size: cover;
   	background-attachment: fixed;
+}
+
+@media (min-aspect-ratio: 16/9) {
+	#portada-video {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-aspect-ratio: 16/9) {
+	#portada-video {
+		width: auto;
+		height: 100%;
+	}
 }
 
 /*para la imagen de la seccion 1*/
@@ -75,10 +95,15 @@ h1 {
     /*si deseas colocar una clase redondeada en la imagen con rounded-circle*/
 }
 
+.hero-principal h1 {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgba(0, 0, 0, 0.137);
+}
+
 /*para el susbtitulo del h2*/
 .hero-principal h2 { 
     font-size: 1.5rem;
-    color: #fdfdfd;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgba(0, 0, 0, 0.137);
 }
 
 
@@ -148,9 +173,43 @@ h1 {
     font-weight: 600;
     transition: .5s;
     padding: 10px 10px 0 10px;
-    border: 1px solid #848484;
+    border: 1px solid #84848400;
+    border-radius: 5px;
     overflow: hidden;
 }
+
+
+@media screen and (max-width: 767px){
+    .ts-paralelogramo {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ts-titulo {
+        padding: 0 20%;
+    }
+}
+
+
+@media screen and (max-width: 670px){
+    .ts-paralelogramo {
+        background-color: #020529;
+        transform: skew(-10deg);
+        margin: 0 20px;
+        padding: 0;
+        border-radius: 10px;
+    }
+
+    .ts-titulo h1 {
+        /* color: rgb(255, 138, 42); */
+        /* text-shadow: 1px 1px 2px black, 0 0 1em rgb(255, 136, 0), 0 0 0.2em rgb(0, 0, 0); */
+        color: rgb(42, 131, 255);
+        text-shadow: 1px 1px 2px black, 0 0 1em rgb(0, 81, 255), 0 0 0.2em rgb(0, 0, 0);
+        border-bottom: solid 1px #ffffff;
+        padding-top: 4px;
+    }
+}
+
 
 .ts-descripcion::before, .ts-descripcion::after {
     position: absolute;
@@ -161,10 +220,12 @@ h1 {
     height: 0;
     background: transparent;
     border: 1px solid transparent;
+    border-radius: 5px;
 }
 
 .ts-descripcion:hover::before {
     animation: animate .5s linear forwards;
+    border-radius: 5px;
 }
 
 @keyframes animate {
@@ -199,6 +260,7 @@ h1 {
 
 .ts-descripcion:hover::after {
     animation: animate2 .5s linear forwards;
+    border-radius: 5px;
 }
 
 @keyframes animate2 {
@@ -340,13 +402,23 @@ img {
 
 /*color de fondo de los productos*/
 #productos {
-    background-color: #000000;
+    background-color: #15151c;
     background-size: 100%;
     background-position: 45%;
 }
 
 
+
+
+
+
+
 /*Seccion Servicios*/
+
+#servicios {
+    background-color: #15151c;
+}
+
 .panel {
     overflow: hidden;
     position: relative;
@@ -355,42 +427,39 @@ img {
     display: inline-flex;  /* Alinear elementos de un div de forma horizontal */
 }
 
-/*esconder el logo cuando se vuelve pequeño la web*/
-@media screen and (max-width: 683px){
-    .panel {
-        display: inline;
-    }
-
-    .panel .panel-info, .panel .panel-img {
-        width: 100%;
-    }
+.change-order {
+    display: none;
 }
 
-
-.panel .panel-info {
+.panel .panel-info-left,
+.panel .panel-info-right {
     position: relative;
-    background-color: black;
-    color: white;
+    color: #FFFFFF;
     height: 400px;
     margin: 0;
     padding: 0;
+    width: 40%;
 }
 
-.panel .panel-info h2 {
+.panel .panel-info-right h2,
+.panel .panel-info-left h2
+ {
     font-weight: 800;
     font-size: 40px;
     margin-bottom: 30px;
 }
 
-.panel .panel-info p {
+.panel .panel-info-right p,
+.panel .panel-info-left p {
     font-weight: 600;
     margin-bottom: 20px;
 }
 
-.panel .panel-info a {
-    color: #000000;
-    font-weight: 600;
-    background: linear-gradient(to right, rgb(255, 138, 42), rgb(255, 138, 42), rgb(255, 255, 255), rgb(255, 255, 255));
+.panel .panel-info-right a,
+.panel .panel-info-left a {
+    color: rgb(255, 102, 0);
+    font-weight: 700;
+    background: linear-gradient(to right, rgb(255, 138, 42), rgb(255, 138, 42), #242430, #242430);
     background-size: 300%;
     background-position: right;
     transition: .3s ease-in;
@@ -404,27 +473,128 @@ img {
     text-align: center;
 }
 
-.panel .panel-info a:hover {
+.panel .panel-info-right a:hover,
+.panel .panel-info-left a:hover {
     background-position: left;
+    color: #000000;
 }
 
 
-.panel .panel-info .text-content {
+.panel .panel-info-right .text-content,
+.panel .panel-info-left .text-content {
     position: absolute;
     bottom: 0;
     padding: 30px 40px;
 }
 
-.panel .panel-img {
+
+.panel .panel-img-first {
     position: relative;
     height: 400px;
     padding: 0;
+    overflow: hidden;
+    background-image: url(../assets/asesoramiento4.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 60%;
 }
 
-.panel .panel-img img {
-    width: 100%;
-    display: inline;
+.panel .panel-img-second {
+    position: relative;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../assets/mecanizado.png);
+    background-size: cover;
+    background-position: center;
+    width: 60%;
 }
+
+.panel .panel-img-third {
+    position: relative;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../assets/termico.png);
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+}
+
+.panel .panel-img-fourth {
+    position: relative;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
+    background-image: url(../assets/servicio.webp);
+    background-size: cover;
+    background-position: center;
+    width: 60%;
+}
+
+
+@media screen and (max-width: 1120px){
+    .panel .panel-info-left,
+    .panel .panel-info-right {
+        width: 100%;
+        height: 400px;
+    }
+
+    .panel .panel-info-left .text-content {
+        padding: 30px 40px 30px 0;
+    }
+
+    .panel .panel-info-right .text-content {
+        padding: 30px 0 30px 40px;
+    }
+
+    .panel .panel-img-first,
+    .panel .panel-img-second,
+    .panel .panel-img-third,
+    .panel .panel-img-fourth {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .change-order {
+        display: block;
+    }
+
+    .panel {
+        display: inline-block;
+    }
+
+    .panel .panel-info-left .text-content,
+    .panel .panel-info-right .text-content {
+        padding: 0 0 10px 0;
+    }
+
+    .hide {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 520px){
+    .panel .panel-img-first,
+    .panel .panel-img-second,
+    .panel .panel-img-third,
+    .panel .panel-img-fourth {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .panel .panel-img-first,
+    .panel .panel-img-second,
+    .panel .panel-img-third,
+    .panel .panel-img-fourth {
+        height: 240px;
+    }
+}
+
 
 
 
